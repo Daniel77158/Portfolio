@@ -8,6 +8,7 @@
     --cor-de-fundo: #f0f4f8;
     --cor-de-texto: #1a202c;
     --cor-primaria: #4299e1;
+    --cor-auxiliar: #ed8936;
     --cor-secundaria: #2b6cb0;
     --cor-de-fundo-card: #ffffff;
     --fonte: 'Inter', Arial, sans-serif;
@@ -135,7 +136,7 @@ section {
     padding: 1.5rem;
     text-align: center;
     border-radius: 10px;
-    transform: var(--transicao);
+    transition: var(--transicao);
 }
 
 .skills-item:hover {
@@ -145,4 +146,49 @@ section {
 .skill-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.projeto-card {
+    background-color: var(--cor-de-fundo-card);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: var(--transicao);
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+}
+
+.titulo-projeto {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-secundaria);
+}
+
+.projeto-tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.projeto-tags span {
+    background-color: var(--cor-auxiliar);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#projetos, #skills {
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
